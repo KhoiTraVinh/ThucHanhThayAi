@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class SignInForm extends StatefulWidget {
   @override
@@ -67,9 +68,7 @@ class _SignInPageState extends State<SignInForm> {
                       height: 50,
                       width: MediaQuery.of(context).size.width,
                       child: RaisedButton(
-                        onPressed: () async {
-
-                        },
+                        onPressed: () async {},
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),
                         color: Colors.green,
@@ -98,7 +97,7 @@ class _SignInPageState extends State<SignInForm> {
                                 color: Color(0xFFF5F6F9),
                                 shape: BoxShape.circle),
                             child:
-                                Image.asset("assets/icons/facebook-2.svg"),
+                                SvgPicture.asset("assets/icons/facebook-2.svg"),
                           ),
                           Container(
                             height: 40,
@@ -108,7 +107,7 @@ class _SignInPageState extends State<SignInForm> {
                             decoration: BoxDecoration(
                                 color: Color(0xFFF5F6F9),
                                 shape: BoxShape.circle),
-                            child: Image.asset(
+                            child: SvgPicture.asset(
                                 "assets/icons/google-icon.svg"),
                           ),
                           Container(
@@ -118,7 +117,7 @@ class _SignInPageState extends State<SignInForm> {
                             decoration: BoxDecoration(
                                 color: Color(0xFFF5F6F9),
                                 shape: BoxShape.circle),
-                            child: Image.asset("assets/icons/twitter.svg"),
+                            child: SvgPicture.asset("assets/icons/twitter.svg"),
                           )
                         ],
                       ),
@@ -134,8 +133,7 @@ class _SignInPageState extends State<SignInForm> {
                           style: TextStyle(color: Colors.green, fontSize: 14),
                         ),
                         GestureDetector(
-                            onTap: () async {
-                            },
+                            onTap: () async {},
                             child: Text(
                               " Sign Up",
                               style: TextStyle(
