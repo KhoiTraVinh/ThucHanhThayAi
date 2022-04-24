@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:thay_ai/cart/cartpage.dart';
+import 'package:thay_ai/detail/productpage.dart';
 import './SignIn/signInPage.dart';
 import './SignUp/signUpPage.dart';
 import './SplashPage/SplashPage.dart';
@@ -10,5 +12,7 @@ final Map<String, WidgetBuilder> routes = {
   SignInPage.routeName: (context) => SignInPage(),
   SignUpPage.routeName: (context) => SignUpPage(),
   HomePage.routeName: (context) => HomePage(),
-  CategoryPage.routeName: (context) => CategoryPage()
+  CategoryPage.routeName: (context) => CategoryPage(),
+  ProductPage.routeName: (context) => ProductPage(),
+  CartPage.routeName: (context) => CartPage(),
 };

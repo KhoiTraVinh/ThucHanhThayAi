@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../SignIn/signInPage.dart';
 
 class SplashPage extends StatelessWidget {
   static String routeName = "/splash";
+  Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+
   @override
   Widget build(BuildContext context) {
     new Future.delayed(new Duration(seconds: 3), () {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
+import 'package:thay_ai/detail/productpage.dart';
 import '../../../models/products.dart';
 import '../../../models/utilities.dart';
 
@@ -57,9 +58,9 @@ class ProductPopular extends StatelessWidget {
 }
 
 class ProductItem extends StatelessWidget {
-  Products? product;
+  Products product;
 
-  ProductItem({this.product});
+  ProductItem({required this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -68,8 +69,8 @@ class ProductItem extends StatelessWidget {
       onTap: () {
         //print(product.id.toString());
         Utilities.data.add(product);
-        // Navigator.pushNamed(context, ProductPage.routeName,
-        //     arguments: ProductDetailsArguments(product: product));
+        Navigator.pushNamed(context, ProductPage.routeName,
+            arguments: ProductDetailsArguments(product: product));
       },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
